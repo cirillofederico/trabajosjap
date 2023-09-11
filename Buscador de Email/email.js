@@ -3,17 +3,22 @@
 document.addEventListener('DOMContentLoaded', () => {  //Funcion general para cuando la página esta cargada.
     const btnBuscar = document.getElementById('btnBuscar');
     const contenedor = document.getElementById('contenedor');
-    const url = 'https://jsonplaceholder.typicode.com/users'; 
+    const url = 'https://jsonplaceholder.typicode.com/users';
 
 
-        // Funcion que trae datos de la API.
-    function funcionExtraccion() { 
+    // Funcion que trae datos de la API.
+    function funcionExtraccion() {
         const entradaBuscar = document.getElementById('entradaBuscar');
-        fetch(url)
-            .then(response => response.json())
-            //Llamamos a la funcion mostrarDatos con la respuesta del fetch y la entrada en minúsculas
-            .then(datoArreglo => mostrarDatos(datoArreglo, entradaBuscar.value.toLowerCase()))  
-            .catch(error => console.error("error al extraer datos:", error));
+        try {
+            fetch(url)
+                .then(response => response.json())
+                //Llamamos a la funcion mostrarDatos con la respuesta del fetch y la entrada en minúsculas
+                .then(datoArreglo => mostrarDatos(datoArreglo, entradaBuscar.value.toLowerCase()))
+                .catch(error => console.error("error al extraer datos:", error));
+        }
+        catch (error) {
+            console.error('Error catch', error);
+        }
     }
 
     // Función que se activa con el click botón.
@@ -33,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {  //Funcion general para cu
     function mostrarDatos(datoArreglo, encontrarNombre) {
         contenedor.innerHTML = "";
         //Buscamos en el contenido la existencia del elemento tambien en miniscula.
-        const usuario = datoArreglo.find(element => element.username.toLowerCase() === encontrarNombre);  
+        const usuario = datoArreglo.find(element => element.username.toLowerCase() === encontrarNombre);
 
         if (usuario) {
             const email = usuario.email;
