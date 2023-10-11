@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-info">
+    <div class="container-fluid">
+      <a class="navbar-brand text-primary-emphasis" href="#">Funciones!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <form class="d-flex d-lg-none py-2" role="search"> <!--Lo saco de lg-->
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active px-4" aria-current="page" href="#">Extra 1</a>
+          </li>
+          <li class="nav-item px-4">
+            <a class="nav-link" href="#">Extra 2</a>
+          </li>
+
+          <li class="nav-item px-4">
+            <a class="nav-link" href="#">Extra 3</a>
+          </li>
+
+
+          <li class="nav-item dropdown d-lg-none">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <!-- Acá queda un espacio que no se como ponerlo. T/D-->
+              Opciones
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Opcion 1</a></li>
+              <li><a class="dropdown-item" href="#">Opcion 2</a></li>
+              <li><a class="dropdown-item" href="#">Opcion 3</a></li>
+              <li><a class="dropdown-item" href="#">Opcion 4</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="d-none d-md-none d-sm-none d-lg-block" role="search"> <!--Lo saco de md y sm y lo pongo en lg-->
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="pb-2 d-none d-lg-block"> <!-- El carrousel se va al bajar de lg -->
+      <div class="row">
+        <h1 class="text-center p-2 d-lg-block"> Funciones </h1>
+      </div>
+
+
+      <!-- data-bs-ride="carousel" permite que se inicie solo -->
+      <div data-bs-ride="carousel" id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <h4 class="text-center">En análisis matemático, el concepto general de función, se refiere a una
+              regla que asigna</h4>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <h4 class="text-center">cada elemento de un primer conjunto un único elemento </h4>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <h4 class="text-center">de un segundo conjunto. Las funciones son relaciones</h4>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <h4 class="text-center"> entre los elementos
+              de dos conjuntos.</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row"> <!--Para una fila-->
+
+      <div class="col-lg-3 mb-2 d-none d-lg-block">
+        <div class="card">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item mb-1 py-3">Opcion 1</li> <!-- El py-3 agrega espacio en el eje y -->
+            <li class="list-group-item mb-1 py-3">Opcion 2</li>
+            <li class="list-group-item mb-1 py-3">Opcion 3</li>
+            <li class="list-group-item mb-1 py-3">Opcion 4</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <!-- En pantallas lg ocupa 8 de las 12 columnas, en md ocupa 12 de las 12 columnas(todo) al igual que en sm-->
+        <!--Esto es mejor verlo en %, ocupar 8 de las 12 significa ocupar el 0,6% de la pantalla y 12 de 12 es ocupar una pantalla entera -->
+
+        <div class="row">
+          <!-- creo otra fila para más "tarjetas" en cada columna-->
+
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-2 bg-info ">
+            <!-- En pantallas lg agarra 4/12 columnas, en md 6/12 y en sm 12/12-->
+            <!--Es decir en lg abarca 0.33, en md 0.5 y en sm 1  (refiriendonos al div anterior)-->
+
+            En análisis matemático, el concepto general de función, se refiere a una
+            regla que asigna a cada elemento de un primer conjunto un único elemento
+            de un segundo conjunto. Las funciones son relaciones entre los elementos
+            de dos conjuntos.
+          </div>
+          <div class="mb-2 col-lg-4 col-md-6 col-sm-12 bg-info">
+
+            En análisis matemático, el concepto general de función, se refiere a una
+            regla que asigna a cada elemento de un primer conjunto un único elemento
+            de un segundo conjunto. Las funciones son relaciones entre los elementos
+            de dos conjuntos.
+          </div>
+          <div class="mb-2 col-lg-4 col-md-6 col-sm-12 bg-info ">
+
+            En análisis matemático, el concepto general de función, se refiere a una
+            regla que asigna a cada elemento de un primer conjunto un único elemento
+            de un segundo conjunto. Las funciones son relaciones entre los elementos
+            de dos conjuntos.
+          </div>
+          <div class="mb-2 col-lg-4 col-md-6 col-sm-12 bg-info">
+
+            En análisis matemático, el concepto general de función, se refiere a una
+            regla que asigna a cada elemento de un primer conjunto un único elemento
+            de un segundo conjunto. Las funciones son relaciones entre los elementos
+            de dos conjuntos.
+          </div>
+          <div class="mb-2 col-lg-4 col-md-6 col-sm-12 bg-info ">
+
+            En análisis matemático, el concepto general de función, se refiere a una
+            regla que asigna a cada elemento de un primer conjunto un único elemento
+            de un segundo conjunto. Las funciones son relaciones entre los elementos
+            de dos conjuntos.
+          </div>
+          <div class="mb-2 col-lg-4 col-md-6 col-sm-12 bg-info ">
+
+            En análisis matemático, el concepto general de función, se refiere a una
+            regla que asigna a cada elemento de un primer conjunto un único elemento
+            de un segundo conjunto. Las funciones son relaciones entre los elementos
+            de dos conjuntos.
+          </div>
+          <div class="mb-2 col-lg-4 col-md-6 col-sm-12 bg-info  ">
+
+            En análisis matemático, el concepto general de función, se refiere a una
+            regla que asigna a cada elemento de un primer conjunto un único elemento
+            de un segundo conjunto. Las funciones son relaciones entre los elementos
+            de dos conjuntos.
+          </div>
+          <div class="mb-2 col-lg-4 col-md-6 col-sm-12 bg-info ">
+
+            En análisis matemático, el concepto general de función, se refiere a una
+            regla que asigna a cada elemento de un primer conjunto un único elemento
+            de un segundo conjunto. Las funciones son relaciones entre los elementos
+            de dos conjuntos.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
